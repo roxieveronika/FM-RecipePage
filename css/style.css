@@ -1,0 +1,184 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Young Serif', 'Outfit', sans-serif;
+	background-color: hsl(30, 54%, 90%);
+}
+
+.section {
+	padding: 24px 0;
+	border-bottom: 1px solid hsl(30, 54%, 90%);
+}
+
+.section:last-child {
+	border-bottom: none;
+}
+
+.section-title {
+    margin-bottom: 10px;
+	font-size: 1.6rem;
+	font-family: 'Young Serif', serif;
+	letter-spacing: 2;
+	font-weight: 400;
+	color: hsl(14, 45%, 36%);
+}
+
+.text {
+	font-family: 'Outfit', sans-serif;
+	font-weight: 400;
+    letter-spacing: 1.2;
+    color: hsl(30, 10%, 34%);
+    line-height: 1.8;
+	font-size: 1rem;
+}
+
+/* hr {
+	margin: 20px 0 5px 0;
+	color: hsl(30, 54%, 90%)
+} */
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	max-width: 1440px;
+	background-color:hsl(30, 54%, 90%);
+	height: 100%vh;
+	padding: 50px;
+}
+
+.recipe {
+	display: flex;
+	flex-direction: column;
+	max-width: 750px;
+	padding: 40px;
+	height: 100%;
+	background-color: hsl(0, 0%, 100%);
+	border-radius: 20px;
+}
+
+.recipe-img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.recipe-text {
+	margin-bottom: 20px;
+}
+
+h1 {
+	font-size: 2.4rem;
+	margin: 20px 0;
+	color: hsl(24, 5%, 18%);
+}
+
+.prep-box {
+	background-color:hsl(330, 100%, 98%);
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.prep {
+	font-family: 'Outfit', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 600;
+	border-bottom: none;
+	color: hsl(332, 51%, 32%);
+}
+
+.ul-li-item span {
+ font-weight: 700;
+}
+
+/* padding-left on <li> increases the gap after the list marker, but only if the marker is positioned outside the list item, list-type-postiotion:inside resets it: https://css-tricks.com/everything-you-need-to-know-about-the-gap-after-the-list-marker/ ; also the marker was replaced with a unicode character, so the marker can be placed inside without using list-type-postiotion:inside */
+
+.section-list-ul li {
+	padding-left: 24px;
+	list-style-type: '•';
+	line-height: 2rem;
+}
+
+/* added the same padding to <ol> as to <ul> but wothout changing the marker to unicode character like above */
+.section-list-ol li {
+	/* added margin-bottom to increase space between numbered steps */
+	margin-bottom: .7em;
+	padding-left: 24px;
+	line-height: 1.4rem;
+}
+
+/* added margin so the markers are inside without using list-type-postition:inside which would reset the padding-left property */
+.section-list-ol, .section-list-ul {
+	margin: 10px;
+}
+
+/* added extra padding-left on <ol> container so the numbers are more inside - probably the issue is because of browser setting */
+
+.section-list-ol {
+	padding-left: 10px;
+}
+
+/* changed markers color */
+.ul-li-item::marker {
+	color: hsl(14, 45%, 36%);
+	font-size: 1.4rem;
+}
+.ol-li-item::marker {
+	color: hsl(14, 45%, 36%);
+	font-weight: 700;
+}
+
+/* added font-weight to spans */
+.ol-li-item span {
+	font-weight: 700;
+}
+
+/* setting table with width100% so it fill the whole container */
+
+.nutrition-table {
+	margin: 0;
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.nutrition-desc {
+	padding: 10px 0;
+ 	text-align: left;
+}
+
+/* setting border bottom */
+.nutrition-table tr {
+	border-bottom: 1px solid hsl(30, 54%, 90%);
+}
+/* adding padding-left to the left part of the table */
+.nutrition-table th {
+	font-weight: 400;
+	padding-left: 40px;
+}
+
+/* adding padding to the rows - can't be set directly for <tr>, <thead>, <tbody> due to css limitation, <tr> is meant to contain other elements like <td>, <th> and not to exist as a standalone container */
+.nutrition-table td {
+	padding: 8px;
+	font-weight: 700;
+	color: hsl(14, 45%, 36%)
+}
+
+/* removing border from the last row */
+.nutrition-table tr:last-child {
+	border-bottom: none;
+}
+
+.attribution {
+	margin: 10px 0;
+	padding: 10px 5px;
+	font-family: "Outfit", sans-serif;
+}
